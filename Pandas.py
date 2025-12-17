@@ -226,12 +226,88 @@
 
 
 # .iloc[] => Integer based indexing
-import pandas as pd
-details = {
-    'Name':['Aman','Rohan','Sohan','Mohan'],
-    'Subject':['Maths','Science','English','Hindi'],
-    'Marks':[90,85,88,92],
-    'Address':['Delhi','Mumbai','Kolkata','Chennai']
-}
-df = pd.DataFrame(details,index=['a','b','c','d']) # By default index is 0 to 3 when we give indexes then it will replace the default index.
-print(df.iloc[['a','b','c','d'],['Name','Subject','Marks']])
+# import pandas as pd
+# details = {
+#     'Name':['Aman','Rohan','Sohan','Mohan'],
+#     'Subject':['Maths','Science','English','Hindi'],
+#     'Marks':[90,85,88,92],
+#     'Address':['Delhi','Mumbai','Kolkata','Chennai']
+# }
+# df = pd.DataFrame(details,index=['a','b','c','d']) # By default index is 0 to 3 when we give indexes then it will replace the default index.
+# print(df.iloc[['a','b','c','d'],['Name','Subject','Marks']])
+
+
+
+# import pandas as pd 
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df)
+
+# import pandas as pd 
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df.head)
+# head() method is used to print the first five rows of the dataframe.
+
+
+# import pandas as pd 
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df.sample(10))
+# sample() method is used to print the random rows of the dataframe.
+# Here 10 random rows will be printed.
+# but if we have n rows from the dataframe we use df.sample(n).
+
+
+# import numpy as np
+# import pandas as pd
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# np.random.seed(43)
+# # print(df.sample(10))
+# print(df.tail())
+
+# df.tail() method is used to print the last five rows of the dataframe.
+
+
+
+# import pandas as pd
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df.info())
+# df.info() method is used to print the summary of the dataframe.
+
+
+# import pandas as pd
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df.describe())
+
+# df.describe() method is used to print the statistical summary of the dataframe.
+# It includes measures like count, mean, std deviation, min, max, and quartiles for numerical columns.
+# df.describe is used to show five point summary of the data or it show the statistical property of the data on the numerical columns.
+# five point summary:-
+# 1. minimum => min => 0th percentile
+# 2. first quartile => 25th percentile
+# 3. median => second quartile => 50th percentile
+# 4. third quartile => 75th percentile
+# 5. maximum => 100th percentile
+
+# count => shows the total number of entries
+# it shows the mean and standard deviation of the numerical column.
+
+
+# import pandas as pd
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df.isna().sum())
+
+# df.isna() => return true or false by checking wheather the row entry is null or not => if the row entry is null then it return true
+# if row entry is not null then it return false
+
+# df.isna().sum() => it return the total number of null values from the data frame along with their column names.
+
+# import pandas as pd
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df.fillna(df['median_house_value']))
+
+# import pandas as pd
+# df = pd.read_csv(r"C:\Users\MY PC\Downloads\california_housing_test.csv")
+# print(df['median_house_value'].unique())
+# df['median_house_value'].unique() => to find the all categories of the dataframe we use .unique() method it return an array of category.
+
+
+
