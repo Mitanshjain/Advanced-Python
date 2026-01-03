@@ -227,9 +227,9 @@
 
 
 # 5. Find the bottom 5 students based on their math score.
-import pandas as pd
+# import pandas as pd
 
-df = pd.read_csv("StudentsPerformance.csv")
+# df = pd.read_csv("StudentsPerformance.csv")
 
-bottom_5_math = df.nsmallest(5, 'math score')
-print(bottom_5_math)
+# bottom_5_math = df.nsmallest(5, 'math score')
+# print(bottom_5_math)
